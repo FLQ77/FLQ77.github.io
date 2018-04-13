@@ -1,6 +1,6 @@
-/*window.onload=function() {
+window.onload=function() {
 			getJson();
- }*/
+ }
 function getJson() {
 	const url='test.json';
 	return ajax(url);
@@ -24,5 +24,5 @@ function textHandle(res) {
 	for(let item in res) {
 		text=text+item+'<br>';
 	}
-	el.innerHTML=text;
+	el.innerHTML=text; 
 }
