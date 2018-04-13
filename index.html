@@ -32,7 +32,7 @@ function ajax(url) {
 function textHandle(res) {
 	const el=document.getElementById('jsonData');
 	let text='';
-	const books=JSON.parse(res);
+	const books=JSON.parse('res');
 	for(let i in res) {
 		text+=i+':'+res[i]+'<br>';
 	}
