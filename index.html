@@ -34,8 +34,8 @@ function textHandle(res) {
 	let text='';
 	console.log(res);
 	const books=JSON.parse(res);
-	for(let i in res) {
-		text+=i+':'+res[i]+'<br>';
+	for(let i in books) {
+		text+=i+':'+books[i]+'<br>';
 	}
 	el.innerHTML=text; 
 }
