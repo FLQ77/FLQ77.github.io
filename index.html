@@ -6,12 +6,11 @@
 </head>
 <body>
 	<script>
-		window.onload=function() {
-			showJson();
-		}
-		function showJson() {
-			const el=document.getElementById('json');
-			const url='test.txt';
+		/*window.onload=function() {
+			getJson();
+		}*/
+		function getJson() {
+			const url='test.json';
 			return ajax(url);
 			/*el.innerHTML=text;*/ 
 		}
@@ -21,15 +20,16 @@
 			request.onreadystatechange=function() {
 				if(request.readyState == 4 && request.status == 200) {
 					console.log(request.responseText);
-					/*return textHandle(request.responseText);*/
+					return textHandle(request.responseText);
 				}
 			}
 			request.send(null);  
 		}
 		function textHandle() {
-
+			
 		}
 	</script>
-	<div id="json" value="test"></div>
+	<div id="json" onclick="getJson()">获取json数据</div>
+	<div id="data"></div>
 </body>
 </html>
