@@ -29,10 +29,9 @@ function ajax(url) {
 	}
 	request.send(null);  
 }
-function textHandle(resp) {
+function textHandle(res) {
 	const el=document.getElementById('jsonData');
 	let text='';
-	let res='resp';
 	console.log(res);
 	const books=JSON.parse(res);
 	for(let i in res) {
