@@ -1,6 +1,6 @@
-window.onload=function() {
+/*window.onload=function() {
 			getJson();
- }
+ }*/
 function getJson() {
 	const url='test.json';
 	return ajax(url);
