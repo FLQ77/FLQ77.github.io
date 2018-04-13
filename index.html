@@ -33,8 +33,8 @@ function textHandle(res) {
 	const el=document.getElementById('jsonData');
 	let text='';
 	const books=JSON.parse(res);
-	for(let item in res) {
-		text=text+item+'<br>';
+	for(let i in res) {
+		text+=i+':'+res[i]+'<br>';
 	}
 	el.innerHTML=text; 
 }
