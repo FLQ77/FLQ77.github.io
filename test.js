@@ -1,6 +1,9 @@
 /*window.onload=function() {
 			getJson();
  }*/
+function test() {
+	alert('测试一下');
+}
 function getJson() {
 	const url='test.json';
 	return ajax(url);
