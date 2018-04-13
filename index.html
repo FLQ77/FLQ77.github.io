@@ -29,10 +29,11 @@ function ajax(url) {
 	}
 	request.send(null);  
 }
-function textHandle(res) {
+function textHandle(resp) {
 	const el=document.getElementById('jsonData');
 	let text='';
-	const books=JSON.parse('res');
+	let res='resp';
+	const books=JSON.parse(res);
 	for(let i in res) {
 		text+=i+':'+res[i]+'<br>';
 	}
