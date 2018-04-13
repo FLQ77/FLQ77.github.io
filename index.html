@@ -2,9 +2,34 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>my works</title>
+	<title>JSON</title>
 </head>
 <body>
-	This is my works.
+	<script>
+		window.onload=function() {
+			showJson();
+		}
+		function showJson() {
+			const el=document.getElementById('json');
+			const url='text.txt';
+			return ajax(url);
+			/*el.innerHTML=text;*/ 
+		}
+		function ajax(url) {
+			const request = new XMLHttpRequest();
+			request.open('GET',url,true);
+			request.onreadystatechange=function() {
+				if(request.readyState == 4 && request.status == 200) {
+					console.log(request.responseText);
+					/*return textHandle(request.responseText);*/
+				}
+			}
+			request.send(null);  
+		}
+		function textHandle() {
+
+		}
+	</script>
+	<div id="json" value="test"></div>
 </body>
 </html>
