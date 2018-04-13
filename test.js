@@ -17,6 +17,12 @@ function ajax(url) {
 	}
 	request.send(null);  
 }
-function textHandle() {
-			
+function textHandle(res) {
+	const el=document.getElementById('jsonData');
+	let text='';
+	const books=JSON.parse(res);
+	for(let item in res) {
+		text=text+item+'<br>';
+	}
+	el.innerHTML=text;
 }
