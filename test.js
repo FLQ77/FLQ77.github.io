@@ -23,15 +23,13 @@ function ajax(url) {
 function textHandle(res) {
 	const el=document.getElementById('jsonData');
 	let text='';
-	const books=JSON.parse(res);
-	for(let item in res) {
-		text=text+item+'<br>';
+	console.log(res);
+	const books=res;
+	/*const books=JSON.parse(res);*/
+	for(let i in books) {
+		text+=i+':'+books[i]+'<br>';
 	}
 	el.innerHTML=text; 
 }
 
 
-//jsonp测试
-window.onload=function() {
-	alert('success');
-}
