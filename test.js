@@ -27,7 +27,8 @@ function textHandle(res) {
 	const books=res;
 	/*const books=JSON.parse(res);*/
 	for(let i in books) {
-		text+=i+':'+books[i]+'<br>';
+		console.log(i+books[i]);
+		/*text+=i+':'+books[i]+'<br>';*/
 	}
 	el.innerHTML=text; 
 }
