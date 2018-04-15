@@ -24,11 +24,9 @@ function textHandle(res) {
 	const el=document.getElementById('jsonData');
 	let text='';
 	console.log(res);
-	const books=res;
-	/*const books=JSON.parse(res);*/
+	const books=JSON.parse(res);
 	for(let i in books) {
-		console.log(i+books[i]);
-		/*text+=i+':'+books[i]+'<br>';*/
+		text+=i+':'+books[i]+'<br>';
 	}
 	el.innerHTML=text; 
 }
