@@ -29,3 +29,9 @@ function textHandle(res) {
 	}
 	el.innerHTML=text; 
 }
+
+
+//jsonp测试
+window.onload=function() {
+	alert('success');
+}
