@@ -9,16 +9,16 @@
 	<div id="json" onclick="getJson()">获取json数据</div>
 	<div id="jsonData"></div>
 	<div id="jsonpData"></div>
-	<script>
+	<!-- <script>
 		function test() {
 	alert('测试一下');
-}
-function getJson() {
+	}
+	function getJson() {
 	const url='test.json';
 	return ajax(url);
 	/*el.innerHTML=text;*/ 
-}
-function ajax(url) {
+	}
+	function ajax(url) {
 	const request = new XMLHttpRequest();
 	request.open('GET',url,true);
 	request.onreadystatechange=function() {
@@ -28,8 +28,8 @@ function ajax(url) {
 		}
 	}
 	request.send(null);  
-}
-function textHandle(res) {
+	}
+	function textHandle(res) {
 	const el=document.getElementById('jsonData');
 	let text='';
 	console.log(res);
@@ -38,8 +38,8 @@ function textHandle(res) {
 		text+=i+':'+books[i]+'<br>';
 	}
 	el.innerHTML=text; 
-}
-	</script>
+	}
+	</script> -->
 	<script src="https://flq77.github.io/test.js></script>
 </body>
 </html>
