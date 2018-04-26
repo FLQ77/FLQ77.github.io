@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3过渡</title>
+	<style>
+		h1 {
+			width: 300px;
+			margin: 0 auto;
+			text-align: center;
+
+			transition: color 1s;  /*使用CSS3过渡，过渡属性为color,效果时间设为1s*/
+            -moz-transition: color 1s;	
+            -webkit-transition: color 1s;	
+            -o-transition: color 1s;
+		}
+		div {
+			width: 300px;
+			margin: 50px auto;
+
+		}
+		.line {
+			width: 0;
+			height: 10px;
+			background: blue;
+
+			transition: width 1s;  /*使用CSS3过渡，过渡属性为width,效果时间设为1s*/
+            -moz-transition: width 1s;	
+            -webkit-transition: width 1s;	
+            -o-transition: width 1s;
+		}
+		#switch {
+			width: 100px;
+			margin: 0 auto;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			text-align: center;
+			cursor: 
+		}
+	</style>
+</head>
+<body>
+	<h1 class="header">百度前端学院</h1>
+	<div class="line"></div>
+	<div>
+		<p id="switch">切换样式</p>
+	</div>
+	<script>
+		//给切换样式元素绑定click事件
+		document.getElementById("switch").onclick = function() {
+			//要改变样式的获取元素
+			var h = document.getElementsByTagName("h1")[0];
+			const line = document.getElementsByClassName("line")[0];
+			//判断当前样式，然后改变样式	
+				if(h.style.color != "blue") {
+					h.style.color = "blue";
+					line.style.width = "300px";
+				} else {
+					h.style.color = "#000";
+					line.style.width = "0";
+				}
+		}
+	</script>
+</body>
+</html>
